@@ -20,7 +20,7 @@ body {
 
 /* Шапка - Mobile First */
 #site-header {
-    background-color: #577a9b;
+    background-color: #406154;
     color: white;
     width: 100%;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 #site-header > .container:last-child {
-    background-color: #577a9b;
+    background-color: #406154;
     padding: 10px 15px;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 #main-nav a:hover {
-    background-color: #3498db;
+    background-color: #34dbb4;
 }
 
 #site-title {
@@ -100,7 +100,7 @@ body {
 }
 
 .content-section h2 {
-    color: #2980b9;
+    color: #34dbb4;
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 2px solid #eee;
@@ -119,13 +119,13 @@ body {
 }
 
 .content-section a {
-    color: #3498db;
+    color: #34dbb4;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .content-section a:hover {
-    color: #2980b9;
+    color: #34dbb4;
     text-decoration: underline;
 }
 
@@ -163,7 +163,7 @@ body {
 }
 
 #data-table th {
-    background-color: #3498db;
+    background-color: #34dbb4;
     color: white;
     position: sticky;
     left: 0;
@@ -173,7 +173,7 @@ body {
 #data-table th:first-child {
     position: sticky;
     left: 0;
-    background-color: #3498db;
+    background-color:#34dbb4;
     color: white;
     z-index: 2;
 }
@@ -272,7 +272,7 @@ body {
 
 .form-group button {
     padding: 12px 20px;
-    background-color: #3498db;
+    background-color: #34dbb4;
     color: white;
     border: none;
     border-radius: 4px;
@@ -282,7 +282,7 @@ body {
 }
 
 .form-group button:hover {
-    background-color: #2980b9;
+    background-color:#34dbb4;
 }
 
 /* Подвал */
@@ -368,7 +368,7 @@ body {
     }
     
     #data-table th:first-child {
-        background-color: #3498db;
+        background-color: #34dbb4;
         color: white;
     }
     
