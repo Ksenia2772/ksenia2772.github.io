@@ -1,402 +1,62 @@
-/* style.css - Mobile First */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    font-family: 'Times New Roman', Times, serif;
 }
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-}
-
 .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* Шапка - Mobile First */
-#site-header {
-    background-color: #406154;
-    color: white;
-    width: 100%;
-}
-
-#site-header > .container:first-child {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    max-width: 960px;
+    background-color: #f4f2ef;
+    border-radius: 10px;
     padding: 15px;
 }
-
-#site-header > .container:last-child {
-    background-color: #406154;
-    padding: 10px 15px;
+body {
+    background-color: #bc66ae;
+    line-height: 1.6;
 }
-
-.logo img {
-    height: 80px;
-    width: auto;
+header {
+    background-color: #49002c;
+    padding: 30px;
+    color:#f4f2ef;
+    font-size: 20px;
 }
-
-/* Навигация - вертикальная на мобильных */
-#main-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+.nav-link:hover {
+    color: #c1121f;
 }
-
-#main-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    text-align: center;
-    transition: background-color 0.3s;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-#main-nav a:hover {
-    background-color: #34dbb4;
-}
-
-#site-title {
-    text-align: center;
-    color: white;
-    font-size: 1.8em;
-    margin: 0;
-}
-
-/* Основной контент - Mobile First */
-.main-content {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Изменение порядка для мобильных: таблица выше списка ссылок */
-#table-section {
-    order: -1; /* Таблица становится первой */
-}
-
-#links-section {
-    order: 0; /* Список ссылок следует за таблицей */
-}
-
-#form-section {
-    order: 1; /* Форма остается последней */
-}
-
-.content-section {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.content-section h2 {
-    color: #34dbb4;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #eee;
-}
-
-/* Список гиперссылок */
-.content-section ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.content-section li {
-    margin-bottom: 15px;
-    padding: 8px;
-    border-bottom: 1px solid #eee;
-}
-
-.content-section a {
-    color: #34dbb4;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.content-section a:hover {
-    color: #34dbb4;
-    text-decoration: underline;
-}
-
-.content-section ol {
-    padding-left: 20px;
-    margin-top: 5px;
-}
-
-.content-section ol li {
-    border-bottom: none;
-    margin-bottom: 5px;
-}
-
-/* Контейнер для таблицы с горизонтальной прокруткой */
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin: 15px 0;
-    -webkit-overflow-scrolling: touch; /* Плавная прокрутка на iOS */
-}
-
-/* Таблица */
-#data-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9em;
-    min-width: 600px; /* Минимальная ширина для обеспечения читаемости */
-}
-
-#data-table th, #data-table td {
-    padding: 8px 10px;
-    text-align: left;
-    border: 1px solid #ddd;
-    white-space: nowrap; /* Запрещаем перенос текста в ячейках */
-}
-
-#data-table th {
-    background-color: #34dbb4;
-    color: white;
-    position: sticky;
-    left: 0;
-}
-
-#data-table td:first-child,
-#data-table th:first-child {
-    position: sticky;
-    left: 0;
-    background-color:#34dbb4;
-    color: white;
-    z-index: 2;
-}
-
-#data-table td:first-child {
-    background-color: #ffffff;
-    color: #333;
-}
-
-#data-table tr:nth-child(even) td:first-child {
-    background-color: #f2f2f2;
-}
-
-#data-table tr:nth-child(odd) td:first-child {
-    background-color: #ffffff;
-}
-
-#data-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-#data-table tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-#data-table tr:hover {
-    background-color: #e9f7fe;
-}
-
-#data-table tr:hover td:first-child {
-    background-color: #e9f7fe;
-}
-
-/* Индикатор прокрутки для мобильных */
-.table-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.table-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
-}
-
-.table-container::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 4px;
-}
-
-.table-container::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
-}
-
-/* Форма */
-#user-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
+ul li {
     margin-bottom: 8px;
-    font-weight: bold;
-    color: #2c3e50;
 }
-
-.form-group input[type="text"],
-.form-group input[type="tel"],
-.form-group input[type="email"],
-.form-group input[type="date"],
-.form-group input[type="number"],
-.form-group select,
-.form-group textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1em;
+ul li a {
+    font-size: large;
+    color:black;
+    text-decoration: none;
 }
-
-.radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+ul li a:hover {
+    color:#c1121f;
 }
-
-.radio-group label {
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.form-group button {
-    padding: 12px 20px;
-    background-color: #34dbb4;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-.form-group button:hover {
-    background-color:#34dbb4;
-}
-
-/* Подвал */
-#site-footer {
-    background-color: #577a9b;
-    color: white;
-    text-align: center;
-    padding: 35px 0;
+#table{
+    border-collapse: collapse;
     width: 100%;
-    margin: 0;
+    height: 250px;
+    margin: 20px 0;
 }
-
-/* ===== TABLET STYLES (768px and up) ===== */
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-    
-    #site-header > .container:first-child {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    #main-nav {
-        flex-direction: row;
-        gap: 15px;
-        width: auto;
-    }
-    
-    #main-nav a {
-        padding: 5px 10px;
-        background-color: transparent;
-    }
-    
-    .logo img {
-        height: 100px;
-    }
-    
-    #site-title {
-        font-size: 2em;
-    }
-    
-    /* Восстанавливаем исходный порядок для планшетов и десктопов */
-    .main-content {
-        display: block;
-    }
-    
-    #table-section,
-    #links-section,
-    #form-section {
-        order: 0;
-    }
-    
-    .content-section {
-        padding: 25px;
-        margin: 25px 0;
-    }
-    
-    /* На планшетах и десктопах убираем ограничения по ширине таблицы */
-    .table-container {
-        overflow-x: visible;
-        margin: 20px 0;
-    }
-    
-    #data-table {
-        font-size: 1em;
-        min-width: auto;
-        width: 100%;
-    }
-    
-    #data-table th, #data-table td {
-        padding: 10px 12px;
-        white-space: normal; /* Разрешаем перенос текста */
-    }
-    
-    /* Убираем sticky для десктопной версии */
-    #data-table th:first-child,
-    #data-table td:first-child {
-        position: static;
-        background-color: inherit;
-        color: inherit;
-    }
-    
-    #data-table th:first-child {
-        background-color: #34dbb4;
-        color: white;
-    }
-    
-    .radio-group {
-        flex-direction: row;
-        gap: 20px;
-    }
+#table th{
+    border: 1px solid black;
+    background-color: #490035c2;
+    color:white;
 }
-
-/* ===== DESKTOP STYLES (992px and up) ===== */
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-    
-    .logo img {
-        height: 120px;
-    }
-    
-    #site-title {
-        font-size: 2.2em;
-    }
-    
-    .content-section {
-        margin: 30px 0;
-    }
-    
-    #data-table th, #data-table td {
-        padding: 12px 15px;
-    }
+#table td, #table th {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+#table tr:nth-child(even) {
+    background-color: #bc66ae;
+}
+#table tr:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+}
+footer {
+    background-color: #49002c;
+}
+footer p {
+    color: #f4f2ef;
 }
